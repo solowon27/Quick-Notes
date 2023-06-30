@@ -22,6 +22,9 @@ Install the dependencies:
 
 The server will start running on http://localhost:3000.
 
+# Deployment
+```heroku``` https://pure-shelf-29336-362df3274b0d.herokuapp.com
+```Github``` https://github.com/solowon27/Quick-Notes
 # Usage
 Open your web browser and go to http://localhost:3000/notes.
 
