@@ -22,11 +22,8 @@ Install the dependencies:
 
 The server will start running on http://localhost:3000.
 
-# Deployment
-```heroku``` https://pure-shelf-29336-362df3274b0d.herokuapp.com
-```Github``` https://github.com/solowon27/Quick-Notes
 # Usage
-Open your web browser and go to http://localhost:3000/notes.
+Open your web browser and go to http://localhost:3000/notes. or click the ```heroku``` link under the deployment section
 
 ```1```To create a new note, enter a title and the text content in the provided input fields. Click the "Save Note" button to save the note.
 
@@ -36,8 +33,15 @@ Open your web browser and go to http://localhost:3000/notes.
 
 # File Structure
 ```server.js:``` The main server file that handles the API routes and serves the HTML files.
+
 ```public/:``` Contains the static files such as HTML, CSS, and client-side JavaScript files.
+
 ```db/db.json:``` The JSON file used as a database to store the notes.
+
+# Deployment
+```heroku``` https://pure-shelf-29336-362df3274b0d.herokuapp.com
+
+```Github``` https://github.com/solowon27/Quick-Notes
 
 # Dependencies
 The application uses the following dependencies:
@@ -50,7 +54,7 @@ The application uses the following dependencies:
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
 # License
-This project is licensed under the MIT License.
+This project is licensed under the ```MIT License```.
 
 Feel free to customize the README file according to your project's specific details and requirements.
 
