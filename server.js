@@ -1,6 +1,7 @@
 const express = require('express'); // import express package
 const path = require('path'); // import path package
 const fs = require('fs'); // import fs package
+const uuid = require('./helper/uuid'); // import uuid package
 
 const app = express(); // create express app 
 const PORT = process.env.PORT || 3000; //process.env.PORT is for heroku deployment
@@ -42,7 +43,11 @@ app.get('/notes', (req, res) => {
   
   function addNote(newNote) { // add new note to db.json by pushing new note to notes array
     const notes = getNotes();
-    notes.push(newNote);
+    const noteWithId = {
+        id: uuid(),
+        ...newNote
+    };
+    notes.push(noteWithId);
     saveNotes(notes);
   }
   
