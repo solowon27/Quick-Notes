@@ -1,14 +1,14 @@
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
+const express = require('express'); // import express package
+const path = require('path'); // import path package
+const fs = require('fs'); // import fs package
 
-const app = express();
+const app = express(); // create express app 
 const PORT = process.env.PORT || 3000; //process.env.PORT is for heroku deployment
 
-app.use(express.json());
+app.use(express.json()); // middleware to parse incoming data   
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+app.use(express.static('public')); // middleware to serve static files
 
 app.get('/api/notes', (req, res) => { // get request to get all notes
   const notes = getNotes();
@@ -22,7 +22,7 @@ app.post('/api/notes', (req, res) => { // post request to add a note
 });
 
 app.delete('/api/notes/:id', (req, res) => { // delete request to delete a note
-    const noteId = req.params.id;
+    const noteId = req.params.id; 
     deleteNote(noteId);
     res.sendStatus(200);
   });
@@ -35,8 +35,8 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
   });
   
-  function getNotes() {
-    const data = fs.readFileSync(path.join(__dirname, './db/db.json'), 'utf8');
+  function getNotes() { // get notes from db.json
+    const data = fs.readFileSync(path.join(__dirname, './db/db.json'), 'utf8'); // read db.json
     return JSON.parse(data);
   }
   
@@ -48,8 +48,8 @@ app.get('/notes', (req, res) => {
   
   function deleteNote(noteIndex) { // delete note from db.json
       const notes = getNotes();
-      notes.splice(noteIndex, 1);
-      saveNotes(notes);
+      notes.splice(noteIndex, 1); // remove note from notes array
+      saveNotes(notes); //and save notes to db.json that does not include the deleted note
     }
 
     function saveNotes(notes) { // save notes to db.json by writing to db.json
