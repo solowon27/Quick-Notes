@@ -59,6 +59,8 @@ The application uses the following dependencies:
 
 ![if you are not using ```insomnia``` for http request you can see the screenshoots i have done in insomnia on Assets folder for ex:-](./Assets/get-api-notes-IDs.jpg)
 
+# Credit 
+Github Copilot helpme out on the addNote and deleteNote requests
 # Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 

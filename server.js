@@ -61,7 +61,7 @@ app.get('/notes', (req, res) => {
     notes.push(noteWithId);
     saveNotes(notes);
   }
-  function deleteNote(noteId) {
+  function deleteNote(noteId) { 
     const notes = getNotes();
     const updatedNotes = notes.filter(note => note.id !== noteId);
     saveNotes(updatedNotes);
