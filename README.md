@@ -1,14 +1,17 @@
 # Quick-Notes
-# a Note Taking App
-
+```a Note Taking App ```
+## Description 
 This is a simple note-taking application built with Node.js and Express.js. It allows users to create, view, and delete notes. The application uses a JSON file as a database to store the notes.
 
 ## Features
 
-- Create a new note with a ```title``` and ```text content```.
-- ```View``` a list of all notes.
-- ```Delete``` a note by clicking on the delete button.
-- ```View ``` the content of a note by clicking on it in the list.
+-```Create``` Users can create a new note by providing a title and the content of the note. This information is then stored in a JSON file as a new entry.
+
+- ```View``` Users can view a list of all the notes that have been created. This involves retrieving the data from the JSON file and displaying it to the user.
+
+- ```Delete``` Users can delete a specific note from the list by clicking on the trash icon. This involves removing the corresponding entry from the JSON file a note.
+
+- ```View ``` Users can view the content of a note by clicking on it in the list.
 
 ## Installation
 
@@ -38,12 +41,6 @@ Open your web browser and go to http://localhost:3000/notes
 
 ```db/db.json:``` The JSON file used as a database to store the notes.
 
-# Deployment
-
-```heroku``` https://pure-shelf-29336-362df3274b0d.herokuapp.com
-
-```Github``` https://github.com/solowon27/Quick-Notes
-
 # Dependencies
 The application uses the following dependencies:
 
@@ -52,6 +49,15 @@ The application uses the following dependencies:
 ```path:``` Node.js module for working with file and directory paths
 
 ```fs:``` Node.js module for interacting with the file system
+# Deployment
+
+```heroku``` https://pure-shelf-29336-362df3274b0d.herokuapp.com
+
+```Github``` https://github.com/solowon27/Quick-Notes
+
+# Examples 
+
+![if you are not using ```insomnia``` for http request you can see the screenshoots i have done in insomnia on Assets folder for ex:-](./Assets/get-api-notes-IDs.jpg)
 
 # Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
