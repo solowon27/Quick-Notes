@@ -8,7 +8,7 @@ This is a simple note-taking application built with Node.js and Express.js. It a
 - Create a new note with a ```title``` and ```text content```.
 - ```View``` a list of all notes.
 - ```Delete``` a note by clicking on the delete button.
-- ```View and edit``` the content of a note by clicking on it in the list.
+- ```View ``` the content of a note by clicking on it in the list.
 
 ## Installation
 
@@ -16,15 +16,14 @@ This is a simple note-taking application built with Node.js and Express.js. It a
 
 git clone git@github.com:solowon27/Quick-Notes.git
 
-```2.``` Navigate to the project directory:
+```2.``` Navigate to the project directory in ur terminal
 
 Install the dependencies:
 ```npm install```
 
-The server will start running on http://localhost:3000.
-
+run ```node server.js```
 # Usage
-Open your web browser and go to http://localhost:3000/notes. or click the ```heroku``` link under the deployment section
+Open your web browser and go to http://localhost:3000/notes 
 
 ```1```To create a new note, enter a title and the text content in the provided input fields. Click the "Save Note" button to save the note.
 
@@ -62,7 +61,7 @@ This project is licensed under the ```MIT License```.
 # Contact 
 for more information about the app please contact me through solowon@hotmail.com
 
-By ```Solomon Tegegne``` @ ```University of Utah``` July 2023
+By ```Solomon Tegegne``` with ```University of Utah coding bootcamp``` July 2023
 
 
 
