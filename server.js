@@ -62,11 +62,11 @@ app.get('/notes', (req, res) => {
     saveNotes(notes);
   }
   
-  function deleteNote(noteIndex) { // delete note from db.json
-      const notes = getNotes();
-      notes.splice(noteIndex, 1); // remove note from notes array
-      saveNotes(notes); //and save notes to db.json that does not include the deleted note
-    }
+  app.delete('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+    deleteNote(noteId);
+    res.sendStatus(200);
+  });
 
     function saveNotes(notes) { // save notes to db.json by writing to db.json
         fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify(notes, null, 2));
