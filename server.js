@@ -22,6 +22,17 @@ app.post('/api/notes', (req, res) => { // post request to add a note
   res.json(newNote);
 });
 
+function getNoteIds() { // get note ids from db.json
+  const notes = getNotes();
+  const noteIds = notes.map(note => note.id);
+  return noteIds;
+  
+}
+app.get('/api/notes/:id', (req, res) => {
+    const noteIds = getNoteIds();
+  res.json(noteIds);
+});
+
 app.delete('/api/notes/:id', (req, res) => { // delete request to delete a note
     const noteId = req.params.id; 
     deleteNote(noteId);

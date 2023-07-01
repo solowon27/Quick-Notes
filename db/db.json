@@ -3,5 +3,15 @@
     "id": "e388",
     "title": "note with id",
     "text": "this is a test with id"
+  },
+  {
+    "id": "521b",
+    "title": "hello 1",
+    "text": "heyyyyyyy"
+  },
+  {
+    "id": "2d07",
+    "title": "hey this heroku test",
+    "text": "heroku test if the delete Note is functional or not"
   }
 ]
