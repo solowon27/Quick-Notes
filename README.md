@@ -44,11 +44,11 @@ Open your web browser and go to http://localhost:3000/notes
 |   └──uuid.js            //uuid.js file to create unique id for each note
 |
 ├── public/               // here is the folder for classes or functions
-    ├── assets/           // here is the folder for classes or functions                 
-          └──css          //css file to style the html
-          └──js           //js file to handle the front end
-    ├──index.html         //html file to display the front end
-    └──notes.html         //html file to display the front end
+|  ├── assets/           // here is the folder for classes or functions                 
+|  |   └──css          //css file to style the html
+|  |   └──js           //js file to handle the front end
+|  ├──index.html         //html file to display the front end
+|  └──notes.html         //html file to display the front end
 |
 ├── .gitignore            // files and folders to be ignored by git
 ├──LICENSE               // MIT license
