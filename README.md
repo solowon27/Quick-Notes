@@ -35,6 +35,29 @@ Open your web browser and go to http://localhost:3000/notes
 ```3```To delete a note, click on the trash icon next to the note in the list.
 
 # File Structure
+
+```
+|__ Assets                // where screenshoots for https requests 
+├── db                  
+|   └──db.json            //db.json file to store the notes
+├── helper                  
+|   └──uuid.js            //uuid.js file to create unique id for each note
+|
+├── public/               // here is the folder for classes or functions
+    ├── assets/           // here is the folder for classes or functions                 
+          └──css          //css file to style the html
+          └──js           //js file to handle the front end
+    ├──index.html         //html file to display the front end
+    └──notes.html         //html file to display the front end
+|
+├── .gitignore            // files and folders to be ignored by git
+├──LICENSE               // MIT license
+├── package.json          // npm package file
+├── package-lock.json     // npm package file
+├── README.md             // the read me file   
+└── server.js             // the main file where the server is run from      
+```
+
 ```server.js:``` The main server file that handles the API routes and serves the HTML files.
 
 ```public/:``` Contains the static files such as HTML, CSS, and client-side JavaScript files.
