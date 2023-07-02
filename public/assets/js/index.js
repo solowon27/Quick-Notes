@@ -71,11 +71,27 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  saveNote(newNote).then(() => {
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+  saveNote(newNote)
+    .then(() => {
+      getAndRenderNotes();
+      renderActiveNote();
+    })
+    .then(() => {
+      showFlashMessage('Note added successfully', 'success');
+    });
 };
+
+const showFlashMessage = (message, type) => {
+  const flashDiv = document.createElement('div');
+  flashDiv.classList.add('flash-message');
+  flashDiv.classList.add(type);
+  flashDiv.textContent = message;
+  document.body.appendChild(flashDiv);
+  setTimeout(() => {
+    flashDiv.remove();
+  }, 3000);
+};
+
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
@@ -92,8 +108,23 @@ const handleNoteDelete = (e) => {
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
-  });
+  }).then(() => {
+    showFlashMessageTwo('Note deleted successfully', 'danger');
+  })
+  ;
 };
+
+const showFlashMessageTwo = (message, type) => {
+  const flashDiv = document.createElement('div');
+  flashDiv.classList.add('flash-message');
+  flashDiv.classList.add(type);
+  flashDiv.textContent = message;
+  document.body.appendChild(flashDiv);
+  setTimeout(() => {
+    flashDiv.remove();
+  }, 3000);
+};
+
 
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
